@@ -1,0 +1,12 @@
+{
+  "rules": [
+    {
+      "replace": {
+        "column": "card_number1"
+      },
+      "with": {
+        "fill": "*"
+      }
+    }
+  ]
+}
