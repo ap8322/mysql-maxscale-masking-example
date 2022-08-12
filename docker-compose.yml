@@ -11,10 +11,11 @@ services:
             - "3306:3306"
 
     maxscale:
-        image: mariadb/maxscale:2.4.7
+        image: mariadb/maxscale:2.4.10-1
         depends_on:
             - mysql
         volumes:
+            - ./maxscale.cnf:/etc/maxscale.cnf
             - ./maxscale.cnf.d:/etc/maxscale.cnf.d
         ports:
             - "4008:4008"  # proxy port
